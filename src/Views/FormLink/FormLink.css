@@ -1,0 +1,43 @@
+body {
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(8, 8, 8);
+}
+
+.campoLink {
+  font-size: 1em;
+  font-weight: bold;
+  width: 40vw;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  text-indent: 15px;
+}
+
+.botaoEncurtarLink:hover {
+  background-color: rgb(146, 146, 221);
+}
+
+.botaoEncurtarLink {
+  float: left;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 10vw;
+  border-radius: 10px;
+  background-color: rgb(125, 125, 236);
+  color: #ffff;
+}
+
+.formLink {
+  margin-top: 200px;
+  display: flex;
+}
