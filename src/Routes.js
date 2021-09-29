@@ -3,12 +3,14 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Home from "./Views/Home/Home";
+import FormLink from "./Views/FormLink/FormLink";
+import GetLink from "./Views/GetLink/GetLink";
 
 export default function Routes() {
   return (
     <Router>
-      <Route component = { Home }  path="/:link" />
+      <Route component = { GetLink }  path="/:link" />
+      <Route component = { FormLink }  path="/" exact />
     </Router>
   );
 }

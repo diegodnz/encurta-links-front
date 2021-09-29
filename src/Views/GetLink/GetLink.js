@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
+import React, {useState} from 'react';
+import { useParams } from 'react-router';
+import NotFound from '../NotFound/NotFound'
 
-function GetLink(props) {  
-  
-  const link = props.param 
-  console.log(link)
+function GetLink() {  
+  const { link } = useParams(); 
   const axios = require('axios').default;
-  axios.get("http://localhost:8080/links/obter", {
+  const getUrl = process.env.REACT_APP_API_URL + '/links/obter'
+
+  axios.get( getUrl , {
     params: {
       link
     }
   })
-  .then(function (response) {     
-    window.location.href = response.data.link
-  })
-  .catch(function (error) {
-    alert('404 - Not Found')
-  })
-  
-  return <></>
+  .then((response) => Redirecionar(response))
+  return <NotFound></NotFound>;
+}
+
+function Redirecionar(response) {
+  window.location.href = response.data.link
 }
 
 export default GetLink;
